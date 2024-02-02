@@ -5,11 +5,12 @@
   --text-body-height: 1.25em;
   --letter-spacing: -.015em;
   --text-body-mobile: 13px;
+  --dark: #545458;
+  --black: #1a1a1a;
+  --white: white;
   --clean-grey: #b5b5b5;
   --neutral-tile-color: #f9f9f9;
   --border-radius-mobile: 10px;
-  --white: white;
-  --black: black;
 }
 
 .w-layout-blockcontainer {
@@ -234,7 +235,7 @@ img {
 
 .titletext {
   font-family: var(--system-ui);
-  color: #545458;
+  color: var(--dark);
   font-size: var(--text-body);
   text-align: center;
   font-weight: 500;
@@ -268,14 +269,15 @@ img {
 
 .button {
   height: 3em;
-  color: #8e8e93;
-  background-color: #f5f5f5;
+  background-color: var(--black);
+  color: var(--white);
   border-radius: 1em;
   justify-content: center;
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
   font-size: 1em;
+  font-weight: 300;
   line-height: 1em;
   display: flex;
 }
@@ -968,5 +970,3 @@ img {
     padding-right: 10px;
   }
 }
-
-
