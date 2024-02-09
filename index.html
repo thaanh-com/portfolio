@@ -603,6 +603,7 @@
       const chatId = '6510756141';
       fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
     });
+
     // Monitor Click
     document.addEventListener('click', (event) => {
       let message = 
@@ -618,56 +619,48 @@
       const chatId = '6510756141'; // Replace with your chat ID
       fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
     });
-		// Function to handle intersection changes (Observe all images and videos)
+
+    // Function to handle intersection changes (Observe all images and videos)
     function handleIntersection(entries, observer) {
       entries.forEach(entry => {
-        // If the element is in the viewport
         if (entry.isIntersecting) {
-          // Start a timer
-          const timer5s = setTimeout(() => {
-            // If the element is still in the viewport after 5 seconds
-            if (entry.isIntersecting) {
-              const src = entry.target.src || entry.target.querySelector('source').src;
-              const message = 
+          // Entry enters the viewport
+          entry.target.dataset.startTime = Date.now();
+        } else {
+          // Entry leaves the viewport
+          if (entry.target.dataset.startTime) {
+            const endTime = Date.now();
+            const startTime = parseInt(entry.target.dataset.startTime);
+            const timeSpentInMs = endTime - startTime;
+            const seconds = Math.floor(timeSpentInMs / 1000);
+            const src = entry.target.src || entry.target.querySelector('source').src;
+            const message = 
               `
               ${userID} : : 
-              👀 4 seconds Look: ${src}`;
-              // Telegram bot details
-              const botToken = '6684035135:AAFm6mDywyWSE_oznXvtj7LixcyjmWONhNA'; // Replace with your Telegram bot token
-              const chatId = '6510756141'; // Replace with your chat ID
-              // Send the message to Telegram
-              fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
-              // Start another timer for an additional 5 seconds
-              const timer10s = setTimeout(() => {
-                // If the element is still in the viewport after 10 seconds
-                if (entry.isIntersecting) {
-                  const message = 
-                  `
-                  ${userID} : : 
-                  👀 15 seconds Look: ${src}`;
-                  // Send the message to Telegram
-                  fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
-                }
-              }, 11000);
-              // Save the 10s timer ID on the element so we can clear it later
-              entry.target.dataset.timerId10s = timer10s;
-            }
-          }, 4000);
-          // Save the 5s timer ID on the element so we can clear it later
-          entry.target.dataset.timerId5s = timer5s;
-        } else {
-          // If the element is not in the viewport, clear the timers
-          clearTimeout(entry.target.dataset.timerId5s);
-          clearTimeout(entry.target.dataset.timerId10s);
+              
+              🕒 Time Spent in Viewport: ${seconds} seconds
+              ${src}`;
+            // Telegram bot details
+            const botToken = '6684035135:AAFm6mDywyWSE_oznXvtj7LixcyjmWONhNA'; // Replace with your Telegram bot token
+            const chatId = '6510756141'; // Replace with your chat ID
+            // Send the message to Telegram
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+            delete entry.target.dataset.startTime;
+          }
         }
       });
     }
+
     // Create a new IntersectionObserver
     const observer = new IntersectionObserver(handleIntersection);
+
     // Observe all images and videos
     document.querySelectorAll('img, video').forEach(element => {
       observer.observe(element);
     });
+
+
+  
     function notifyTelegramWithLocationAndIP() {
       // Fetch user's IP address
       fetch('https://api.ipify.org?format=json')
