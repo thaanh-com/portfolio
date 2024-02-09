@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Sat Feb 03 2024 21:58:45 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Feb 09 2024 16:11:01 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="65aed26e428a4bfe97e99408" data-wf-site="6567d16cd6dd668610fed31a">
 <head>
   <meta charset="utf-8">
@@ -52,10 +52,10 @@
   <div id="solanaps" class="inbetween">
     <div class="project-footer">
       <div class="footer-title">
-        <div class="titletext">Solanaps</div>
+        <div class="titletext">Sunrise Simulation Device for Sleep Improvement</div>
       </div>
       <div class="footer-body">
-        <div class="textbody">2020<br>Sunrise Simulation Device for Sleep Improvement<br>Product Design and UI<br><br>Our team’s research revealed a common preference for visual over auditory wake-up cues. Solanap took this preference and transferred it into a sleep improvement tool. A custom head device simulates sunrise with soft light and gently wakes up its user. It helps users align naps and night sleep with their natural REM cycles, leading to better sleep quality.<br>‍<br>Collaborators<br>---<br>André Hieber <br>(Hardware &amp; Prototype &amp; Testing)</div>
+        <div class="textbody">2020<br>Solanaps<br>Product Design and UI<br></div>
       </div>
     </div>
     <section class="buttongap _2">
@@ -71,10 +71,10 @@
   <div id="elqi" class="inbetween">
     <div class="project-footer">
       <div class="footer-title">
-        <div class="titletext">elqi</div>
+        <div class="titletext">MVP app for mental wellbeing</div>
       </div>
       <div class="footer-body">
-        <div class="textbody">2023<br>App for Mental Wellbeing<br>UI and UX<br>‍<br>Elqi is an MVP app designed for improving mental wellbeing and supporting healthy relationships. It is intended to transform addictive app habits into mindful breathing exercises. The design is tailored for rapid development and scalability, ensuring a cohesive and adaptable design system.</div>
+        <div class="textbody">2023<br>Elqi<br>UI and UX</div>
       </div>
     </div>
     <section class="buttongap _2">
@@ -82,33 +82,75 @@
     </section>
     <section class="gap"></section>
   </div>
-  <div class="sticky-wrapper">
-    <div class="sticky-column">
-      <div data-ix="new-interaction" class="block-one sticky shell"></div>
+  <section class="section-hw-top double">
+    <div class="columns w-row">
+      <div class="hw-left w-col w-col-6">
+        <div class="w-layout-blockcontainer hh-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/mlyrihdj4md9u7y6yaxjr/arsubvert.mp4?rlkey=jg0hay7nb8d0erx0ahhzmv4r3&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
+            </div>
+            <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+          </div>
+        </div>
+      </div>
+      <div class="hw-right w-col w-col-6">
+        <div class="w-layout-blockcontainer ww-container top w-container"><img src="images/thanh-com-1289748374.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, 48vw" srcset="images/thanh-com-1289748374-p-500.png 500w, images/thanh-com-1289748374-p-800.png 800w, images/thanh-com-1289748374.png 1013w" alt=""></div>
+        <div class="w-layout-blockcontainer ww-container bottom w-container"><img src="images/thanh-com-2384732871.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, 48vw" srcset="images/thanh-com-2384732871-p-500.png 500w, images/thanh-com-2384732871-p-800.png 800w, images/thanh-com-2384732871.png 1013w" alt=""></div>
+      </div>
     </div>
-    <div class="sticky-column _2">
-      <div data-ix="new-interaction" class="block-one sticky center"></div>
+  </section>
+  <div id="arsubvert" class="inbetween _4">
+    <div class="project-footer">
+      <div class="footer-title">
+        <div class="titletext">Interactive AR Poster</div>
+      </div>
+      <div class="footer-body">
+        <div class="textbody">2021<br>AR Subvert<br>‍Physical trackers and Augmented Reality<br>‍<br>AR Subvert is an Augmented Reality project utilizing Meta Spark AR. The project employs a physical poster as a marker, and the virtual object&#x27;s shape alters in relation to the distance from the poster.</div>
+      </div>
     </div>
-    <div data-ix="versionone" class="redirect-section"></div>
-    <div data-w-id="9db03c15-08b8-c6e1-879d-e5b8d00aff52" class="w-layout-blockcontainer redirection-title-container w-container">
-      <div class="redirectiontitle">More Projects</div>
-    </div>
+    <section class="gap"></section>
   </div>
-  <div class="w-layout-blockcontainer hidden-projects w-container">
-    <section class="section-hw-top double">
-      <div class="columns w-row">
-        <div class="hw-left w-col w-col-6">
-          <div class="w-layout-blockcontainer hh-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/mlyrihdj4md9u7y6yaxjr/arsubvert.mp4?rlkey=jg0hay7nb8d0erx0ahhzmv4r3&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
+  <section class="section-ratio-16-9">
+    <div class="w-layout-blockcontainer _w-16-9-container w-container">
+      <div class="html-video w-embed w-script">
+        <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/ybhbgtj10d7ujmixl7v8g/bijlmer-docmentation-randomstudio.mp4?rlkey=c7ipop7xzq2odjqn3wuec5ybl&raw=1">
+          <!--  Video for Safari browsers  -->
+          <img class="safariVideo" style="display:none;">
+          <!--  Video for other browsers  -->
+          <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+            <source type="video/mp4">
+          </video>
+        </div>
+        <script>
     // Function to detect if the user is on Safari
     function isSafari() {
         return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -132,116 +174,23 @@
         }
     }
 </script>
-            </div>
-          </div>
-        </div>
-        <div class="hw-right w-col w-col-6">
-          <div class="w-layout-blockcontainer ww-container top w-container"><img src="images/thanh-com-1289748374.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, 48vw" srcset="images/thanh-com-1289748374-p-500.png 500w, images/thanh-com-1289748374-p-800.png 800w, images/thanh-com-1289748374.png 1013w" alt=""></div>
-          <div class="w-layout-blockcontainer ww-container bottom w-container"><img src="images/thanh-com-2384732871.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, 48vw" srcset="images/thanh-com-2384732871-p-500.png 500w, images/thanh-com-2384732871-p-800.png 800w, images/thanh-com-2384732871.png 1013w" alt=""></div>
-        </div>
       </div>
-    </section>
-    <div id="arsubvert" class="inbetween _4">
-      <div class="project-footer">
-        <div class="footer-title">
-          <div class="titletext">AR Subvert</div>
-        </div>
-        <div class="footer-body">
-          <div class="textbody">2021<br>Workshop Project<br>Physical trackers and Augmented Reality<br>‍<br>AR Subvert is an Augmented Reality project utilizing Meta Spark AR. The project employs a physical poster as a marker, and the virtual object&#x27;s shape alters in relation to the distance from the poster.</div>
-        </div>
-      </div>
-      <section class="gap"></section>
     </div>
-    <section class="section-ratio-16-9">
-      <div class="w-layout-blockcontainer _w-16-9-container w-container">
-        <div class="html-video w-embed w-script">
-          <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/ybhbgtj10d7ujmixl7v8g/bijlmer-docmentation-randomstudio.mp4?rlkey=c7ipop7xzq2odjqn3wuec5ybl&raw=1">
-            <!--  Video for Safari browsers  -->
-            <img class="safariVideo" style="display:none;">
-            <!--  Video for other browsers  -->
-            <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-              <source type="video/mp4">
-            </video>
-          </div>
-          <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
-        </div>
-      </div>
-    </section>
-    <section class="section-hh">
-      <div class="columns w-row">
-        <div class="hh-left w-col w-col-6">
-          <div class="w-layout-blockcontainer hh-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/o5wr7ryirt87cj6e77uc1/rampvlucht-screen.mp4?rlkey=m87ujci4xzdp6a3xlx306no3s&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
+  </section>
+  <section class="section-hh">
+    <div class="columns w-row">
+      <div class="hh-left w-col w-col-6">
+        <div class="w-layout-blockcontainer hh-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/o5wr7ryirt87cj6e77uc1/rampvlucht-screen.mp4?rlkey=m87ujci4xzdp6a3xlx306no3s&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
             </div>
-          </div>
-        </div>
-        <div class="hh-right w-col w-col-6">
-          <div class="w-layout-blockcontainer hh-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/dzm2mca2fk47db7vdcdgw/rampvlucht-concept.mp4?rlkey=gji8x41o7643a97g4ao0iswrj&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
+            <script>
     // Function to detect if the user is on Safari
     function isSafari() {
         return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -265,288 +214,237 @@
         }
     }
 </script>
-            </div>
           </div>
         </div>
       </div>
-    </section>
-    <div id="rampvlucht" class="inbetween _4">
-      <div class="project-footer">
-        <div class="footer-title">
-          <div class="titletext">Rampvlucht</div>
-        </div>
-        <div class="footer-body">
-          <div class="textbody">2022<br>Digital Reconstruction of an Airplane Crash<br>Spatial Web Environment<br><br>Rampvlucht is an interactive online experience developed for KRO-NCRV, a Dutch television broadcaster, commemorating the 30th anniversary of the crash of El Al Flight 1862. This immersive digital portrayal takes users through a 3D storytelling journey, delving into the event and its consequences. Divided into four distinct acts, the experience incorporates archival content and audio to invite users to delve into the historical narrative and grapple with the complexities surrounding the investigation of the incident.</div>
+      <div class="hh-right w-col w-col-6">
+        <div class="w-layout-blockcontainer hh-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/dzm2mca2fk47db7vdcdgw/rampvlucht-concept.mp4?rlkey=gji8x41o7643a97g4ao0iswrj&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
+            </div>
+            <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+          </div>
         </div>
       </div>
-      <section class="gap"></section>
     </div>
-    <section class="section-w-xl">
-      <div class="w-layout-blockcontainer _w-xl-container w-container"><img src="images/thanh-com-23948723847.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 100vw" srcset="images/thanh-com-23948723847-p-500.png 500w, images/thanh-com-23948723847-p-800.png 800w, images/thanh-com-23948723847-p-1080.png 1080w, images/thanh-com-23948723847-p-1600.png 1600w, images/thanh-com-23948723847-p-2000.png 2000w, images/thanh-com-23948723847.png 2030w" alt=""></div>
-    </section>
-    <div id="midjourney" class="inbetween _4">
-      <div class="project-footer">
-        <div class="footer-title">
-          <div class="titletext">Famous Novels through Midjourney</div>
-        </div>
-        <div class="footer-body">
-          <div class="textbody">2023<br>Image Generation Self Project<br>AI prompting<br>‍<br>This experiment explores AI process automation possibilities in creating artworks and illustrations. Prompting chatGPT, I have collected AI-generated descriptions and used them in Midjourney to illustrate significant scenes from famous novels like Fahrenheit 451 by Ray Bradbury and Brief History of Time by Stephen Hawking. The goal was to look at the intersection of AI-generated text and AI-generated art, probing the potential for AI systems to work together creatively.</div>
-        </div>
+  </section>
+  <div id="rampvlucht" class="inbetween _4">
+    <div class="project-footer">
+      <div class="footer-title">
+        <div class="titletext">Digital Reconstruction of an Airplane Crash</div>
       </div>
-      <section class="gap"></section>
+      <div class="footer-body">
+        <div class="textbody">2022<br>R<br>‍Spatial Web Environment<br><br>Rampvlucht is an interactive online experience developed for KRO-NCRV, a Dutch television broadcaster, commemorating the 30th anniversary of the crash of El Al Flight 1862. This immersive digital portrayal takes users through a 3D storytelling journey, delving into the event and its consequences. Divided into four distinct acts, the experience incorporates archival content and audio to invite users to delve into the historical narrative and grapple with the complexities surrounding the investigation of the incident.</div>
+      </div>
     </div>
-    <section class="section-w-xl">
-      <div class="w-layout-blockcontainer _w-xl-container w-container">
-        <div class="html-video w-embed w-script">
-          <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/juyiuhr74gp1pj5iab54r/paulinameyle-com-screen.mp4?rlkey=qegscpn90v26btkc49jmqviqc&raw=1">
-            <!--  Video for Safari browsers  -->
-            <img class="safariVideo" style="display:none;">
-            <!--  Video for other browsers  -->
-            <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-              <source type="video/mp4">
-            </video>
-          </div>
-          <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
-        </div>
+    <section class="gap"></section>
+  </div>
+  <section class="section-w-xl">
+    <div class="w-layout-blockcontainer _w-xl-container w-container"><img src="images/thanh-com-23948723847.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 100vw" srcset="images/thanh-com-23948723847-p-500.png 500w, images/thanh-com-23948723847-p-800.png 800w, images/thanh-com-23948723847-p-1080.png 1080w, images/thanh-com-23948723847-p-1600.png 1600w, images/thanh-com-23948723847-p-2000.png 2000w, images/thanh-com-23948723847.png 2030w" alt=""></div>
+  </section>
+  <div id="midjourney" class="inbetween _4">
+    <div class="project-footer">
+      <div class="footer-title">
+        <div class="titletext">Famous Novels seen through Midjourney</div>
       </div>
-    </section>
-    <section class="section-ww">
-      <div class="columns w-row">
-        <div class="ww-left w-col w-col-6">
-          <div class="w-layout-blockcontainer ww-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/0lo6sm9bsctku9of3lnwp/paulinameyle-arrow.mp4?rlkey=hnyyz3rlko11coehiaunwzap4&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
-            </div>
-          </div>
-        </div>
-        <div class="ww-right w-col w-col-6">
-          <div class="w-layout-blockcontainer ww-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/tc9cl4avrt1mqvsblzcch/paulinemeyle-shop.mp4?rlkey=3w504zibrqi5jneev12bumnr7&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
-            </div>
-          </div>
-        </div>
+      <div class="footer-body">
+        <div class="textbody">2023<br>Image Generation Self Project<br>AI prompting<br>‍<br>This experiment explores AI process automation possibilities in creating artworks and illustrations. Prompting chatGPT, I have collected AI-generated descriptions and used them in Midjourney to illustrate significant scenes from famous novels like Fahrenheit 451 by Ray Bradbury and Brief History of Time by Stephen Hawking. The goal was to look at the intersection of AI-generated text and AI-generated art, probing the potential for AI systems to work together creatively.</div>
       </div>
-    </section>
-    <div class="inbetween">
-      <div class="project-footer">
-        <div class="footer-title">
-          <div class="titletext">paulinameyle.com</div>
-        </div>
-        <div class="footer-body">
-          <div class="textbody">2023<br>Product Catalogue and Portfolio for Client<br>Front End Development<br>‍<br>The project involved creating a minimalist, visually-driven website for a client that doubles as an online shop to display her knit-wear collection. Focused on simplicity, the site features design that highlights her work and includes an easy-to-use table-based editor for content management.</div>
-        </div>
-      </div>
-      <section class="buttongap _2">
-        <a data-w-id="8c9da757-e88e-5a0c-b935-9a0103963443" href="https://paulinameyle.com/" target="_blank" class="button w-button">Open Website</a>
-      </section>
-      <section class="gap"></section>
     </div>
-    <section class="section-w-xl">
-      <div class="w-layout-blockcontainer _w-xl-container w-container"><img src="images/thaanh-com-93178314183294.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 100vw" srcset="images/thaanh-com-93178314183294-p-500.png 500w, images/thaanh-com-93178314183294-p-800.png 800w, images/thaanh-com-93178314183294-p-1080.png 1080w, images/thaanh-com-93178314183294-p-1600.png 1600w, images/thaanh-com-93178314183294-p-2000.png 2000w, images/thaanh-com-93178314183294.png 2030w" alt="steering-prototype-2"><img src="images/thanh-com-1289748374.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 100vw" srcset="images/thanh-com-1289748374-p-500.png 500w, images/thanh-com-1289748374-p-800.png 800w, images/thanh-com-1289748374.png 1013w" alt=""></div>
-    </section>
-    <section class="section-qqq">
-      <div class="w-row">
-        <div class="qqq-left w-col w-col-4">
-          <div class="w-layout-blockcontainer qqq-container w-container"><img src="images/thaanh-com-2837476521.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thaanh-com-2837476521-p-500.png 500w, images/thaanh-com-2837476521.png 674w" alt=""><img src="images/thanh-com-247657656.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thanh-com-247657656-p-500.png 500w, images/thanh-com-247657656-p-800.png 800w, images/thanh-com-247657656-p-1080.png 1080w, images/thanh-com-247657656.png 1348w" alt="steering-prototype-1"></div>
+    <section class="gap"></section>
+  </div>
+  <section class="section-w-xl">
+    <div class="w-layout-blockcontainer _w-xl-container w-container">
+      <div class="html-video w-embed w-script">
+        <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/juyiuhr74gp1pj5iab54r/paulinameyle-com-screen.mp4?rlkey=qegscpn90v26btkc49jmqviqc&raw=1">
+          <!--  Video for Safari browsers  -->
+          <img class="safariVideo" style="display:none;">
+          <!--  Video for other browsers  -->
+          <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+            <source type="video/mp4">
+          </video>
         </div>
-        <div class="qqq-middle w-col w-col-4">
-          <div class="w-layout-blockcontainer qqq-container w-container"><img src="images/thaanh-com-2847576535.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thaanh-com-2847576535-p-500.png 500w, images/thaanh-com-2847576535-p-800.png 800w, images/thaanh-com-2847576535-p-1080.png 1080w, images/thaanh-com-2847576535.png 1348w" alt="steering-prototype-3
+        <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+      </div>
+    </div>
+  </section>
+  <section class="section-ww">
+    <div class="columns w-row">
+      <div class="ww-left w-col w-col-6">
+        <div class="w-layout-blockcontainer ww-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/0lo6sm9bsctku9of3lnwp/paulinameyle-arrow.mp4?rlkey=hnyyz3rlko11coehiaunwzap4&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
+            </div>
+            <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+          </div>
+        </div>
+      </div>
+      <div class="ww-right w-col w-col-6">
+        <div class="w-layout-blockcontainer ww-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/tc9cl4avrt1mqvsblzcch/paulinemeyle-shop.mp4?rlkey=3w504zibrqi5jneev12bumnr7&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
+            </div>
+            <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="inbetween">
+    <div class="project-footer">
+      <div class="footer-title">
+        <div class="titletext">Product Catalogue and Portfolio for Client</div>
+      </div>
+      <div class="footer-body">
+        <div class="textbody">2023<br>paulinameyle.com<br>Front End Development<br>‍<br>The project involved creating a minimalist, visually-driven website for a client that doubles as an online shop to display her knit-wear collection. Focused on simplicity, the site features design that highlights her work and includes an easy-to-use table-based editor for content management.</div>
+      </div>
+    </div>
+    <section class="buttongap _2">
+      <a data-w-id="8c9da757-e88e-5a0c-b935-9a0103963443" href="https://paulinameyle.com/" target="_blank" class="button w-button">Open Website</a>
+    </section>
+    <section class="gap"></section>
+  </div>
+  <section class="section-w-xl">
+    <div class="w-layout-blockcontainer _w-xl-container w-container"><img src="images/thaanh-com-93178314183294.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 100vw" srcset="images/thaanh-com-93178314183294-p-500.png 500w, images/thaanh-com-93178314183294-p-800.png 800w, images/thaanh-com-93178314183294-p-1080.png 1080w, images/thaanh-com-93178314183294-p-1600.png 1600w, images/thaanh-com-93178314183294-p-2000.png 2000w, images/thaanh-com-93178314183294.png 2030w" alt="steering-prototype-2"><img src="images/thanh-com-1289748374.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 100vw" srcset="images/thanh-com-1289748374-p-500.png 500w, images/thanh-com-1289748374-p-800.png 800w, images/thanh-com-1289748374.png 1013w" alt=""></div>
+  </section>
+  <section class="section-qqq">
+    <div class="w-row">
+      <div class="qqq-left w-col w-col-4">
+        <div class="w-layout-blockcontainer qqq-container w-container"><img src="images/thaanh-com-2837476521.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thaanh-com-2837476521-p-500.png 500w, images/thaanh-com-2837476521.png 674w" alt=""><img src="images/thanh-com-247657656.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thanh-com-247657656-p-500.png 500w, images/thanh-com-247657656-p-800.png 800w, images/thanh-com-247657656-p-1080.png 1080w, images/thanh-com-247657656.png 1348w" alt="steering-prototype-1"></div>
+      </div>
+      <div class="qqq-middle w-col w-col-4">
+        <div class="w-layout-blockcontainer qqq-container w-container"><img src="images/thaanh-com-2847576535.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thaanh-com-2847576535-p-500.png 500w, images/thaanh-com-2847576535-p-800.png 800w, images/thaanh-com-2847576535-p-1080.png 1080w, images/thaanh-com-2847576535.png 1348w" alt="steering-prototype-3
 "></div>
-        </div>
-        <div class="qqq-right w-col w-col-4">
-          <div class="w-layout-blockcontainer qqq-container w-container"><img src="images/thaanh-com-12874619832.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thaanh-com-12874619832-p-500.png 500w, images/thaanh-com-12874619832-p-800.png 800w, images/thaanh-com-12874619832-p-1080.png 1080w, images/thaanh-com-12874619832.png 1348w" alt="steering-prototype-4"></div>
-        </div>
       </div>
-    </section>
-    <section class="section-hh">
-      <div class="columns w-row">
-        <div class="hh-left w-col w-col-6">
-          <div class="w-layout-blockcontainer hh-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/1x46h5ta699d3rynx7kze/intersection-process.mp4?rlkey=k8d3b53q4flj7keizajjhcvzn&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
-            </div>
-          </div>
-        </div>
-        <div class="hh-right w-col w-col-6">
-          <div class="w-layout-blockcontainer hh-container w-container">
-            <div class="html-video w-embed w-script">
-              <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/321gvte2y6d7txrw3kqxn/intersection-prototype.mp4?rlkey=uyqtvhaxsd0240osk3unrp20d&raw=1">
-                <!--  Video for Safari browsers  -->
-                <img class="safariVideo" style="display:none;">
-                <!--  Video for other browsers  -->
-                <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-                  <source type="video/mp4">
-                </video>
-              </div>
-              <script>
-    // Function to detect if the user is on Safari
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-    // Get the video containers
-    var containers = document.getElementsByClassName('videoContainer');
-    for (var i = 0; i < containers.length; i++) {
-        // Get the video source, safariVideo, and otherVideo for this container
-        var videoSource = containers[i].getAttribute('data-video-src');
-        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
-        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
-        var sourceTag = otherVideo.getElementsByTagName('source')[0];
-        // Set the video source
-        safariVideo.src = videoSource;
-        sourceTag.src = videoSource;
-        // Show the appropriate video based on the browser
-        if (isSafari()) {
-            safariVideo.style.display = "block";
-        } else {
-            otherVideo.style.display = "block";
-        }
-    }
-</script>
-            </div>
-          </div>
-        </div>
+      <div class="qqq-right w-col w-col-4">
+        <div class="w-layout-blockcontainer qqq-container w-container"><img src="images/thaanh-com-12874619832.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 767px) 94vw, (max-width: 991px) 32vw, 33vw" srcset="images/thaanh-com-12874619832-p-500.png 500w, images/thaanh-com-12874619832-p-800.png 800w, images/thaanh-com-12874619832-p-1080.png 1080w, images/thaanh-com-12874619832.png 1348w" alt="steering-prototype-4"></div>
       </div>
-    </section>
-    <div id="intersection" class="inbetween">
-      <div class="project-footer">
-        <div class="footer-title">
-          <div class="titletext">Intersection</div>
-        </div>
-        <div class="footer-body">
-          <div class="textbody">2021<br>Alternative Vehicle Control<br>Rapid Prototyping<br><br>An automotive control system prototype was created using Arduino and designed after bicycle handlebars. Acceleration is controlled by pulling the grips inward, braking by pushing them outward, and steering by tilting the handlebar, emulating intuitive cyclist’s motion.<br>‍<br>Collaborators<br>--- <br>Andre Hieber<br>(Hardware, Prototyping)<br>‍<br>Ina Kaller<br>(Testing, Photography)</div>
-        </div>
-      </div>
-      <section class="gap"></section>
     </div>
-    <section class="section-w-xl">
-      <div class="w-layout-blockcontainer _w-xl-container w-container">
-        <div class="html-video w-embed w-script">
-          <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/bb7l0sy00i82sp5b4xdkq/index-insight-screen.mp4?rlkey=rh2etjyftzvdu4mqpbkd5zctx&raw=1">
-            <!--  Video for Safari browsers  -->
-            <img class="safariVideo" style="display:none;">
-            <!--  Video for other browsers  -->
-            <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
-              <source type="video/mp4">
-            </video>
-          </div>
-          <script>
+  </section>
+  <section class="section-hh">
+    <div class="columns w-row">
+      <div class="hh-left w-col w-col-6">
+        <div class="w-layout-blockcontainer hh-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/1x46h5ta699d3rynx7kze/intersection-process.mp4?rlkey=k8d3b53q4flj7keizajjhcvzn&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
+            </div>
+            <script>
     // Function to detect if the user is on Safari
     function isSafari() {
         return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -570,31 +468,117 @@
         }
     }
 </script>
+          </div>
         </div>
       </div>
-    </section>
-    <div id="index-insight" class="inbetween">
-      <div class="project-footer">
-        <div class="footer-title">
-          <div class="titletext">index_insight</div>
-        </div>
-        <div class="footer-body">
-          <div class="textbody">2020<br>Interactive Investment Funds Visualisation<br>Data Visualisation<br><br>Index Insight is an interactive data visualization platform, designed to provide an overview of large index funds. It lets the users explore the complex financial sector through graphic illustrations, highlighting the proportions of various assets within these funds.</div>
+      <div class="hh-right w-col w-col-6">
+        <div class="w-layout-blockcontainer hh-container w-container">
+          <div class="html-video w-embed w-script">
+            <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/321gvte2y6d7txrw3kqxn/intersection-prototype.mp4?rlkey=uyqtvhaxsd0240osk3unrp20d&raw=1">
+              <!--  Video for Safari browsers  -->
+              <img class="safariVideo" style="display:none;">
+              <!--  Video for other browsers  -->
+              <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+                <source type="video/mp4">
+              </video>
+            </div>
+            <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+          </div>
         </div>
       </div>
-      <section class="gap"></section>
     </div>
-    <div class="inbetween footer">
-      <div class="text">
-        <div class="textbody"><br>Thanh Nguyen © 2024</div>
+  </section>
+  <div id="intersection" class="inbetween">
+    <div class="project-footer">
+      <div class="footer-title">
+        <div class="titletext">Alternative Vehicle Controls inspired by Bicycle Handlebars</div>
       </div>
+      <div class="footer-body">
+        <div class="textbody">2021<br>Intersection<br>Rapid Prototyping<br><br>An automotive control system prototype was created using Arduino and designed after bicycle handlebars. Acceleration is controlled by pulling the grips inward, braking by pushing them outward, and steering by tilting the handlebar, emulating intuitive cyclist’s motion.<br>‍<br>Collaborators<br>--- <br>Andre Hieber<br>(Hardware, Prototyping)<br>‍<br>Ina Kaller<br>(Testing, Photography)</div>
+      </div>
+    </div>
+    <section class="gap"></section>
+  </div>
+  <section class="section-w-xl">
+    <div class="w-layout-blockcontainer _w-xl-container w-container">
+      <div class="html-video w-embed w-script">
+        <div class="videoContainer" data-video-src="https://www.dropbox.com/scl/fi/bb7l0sy00i82sp5b4xdkq/index-insight-screen.mp4?rlkey=rh2etjyftzvdu4mqpbkd5zctx&raw=1">
+          <!--  Video for Safari browsers  -->
+          <img class="safariVideo" style="display:none;">
+          <!--  Video for other browsers  -->
+          <video class="otherVideo" autoplay="" muted="" loop="" controls="false" style="display:none; object-fit: cover; width: 100%; height: 100%;">
+            <source type="video/mp4">
+          </video>
+        </div>
+        <script>
+    // Function to detect if the user is on Safari
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    // Get the video containers
+    var containers = document.getElementsByClassName('videoContainer');
+    for (var i = 0; i < containers.length; i++) {
+        // Get the video source, safariVideo, and otherVideo for this container
+        var videoSource = containers[i].getAttribute('data-video-src');
+        var safariVideo = containers[i].getElementsByClassName('safariVideo')[0];
+        var otherVideo = containers[i].getElementsByClassName('otherVideo')[0];
+        var sourceTag = otherVideo.getElementsByTagName('source')[0];
+        // Set the video source
+        safariVideo.src = videoSource;
+        sourceTag.src = videoSource;
+        // Show the appropriate video based on the browser
+        if (isSafari()) {
+            safariVideo.style.display = "block";
+        } else {
+            otherVideo.style.display = "block";
+        }
+    }
+</script>
+      </div>
+    </div>
+  </section>
+  <div id="index-insight" class="inbetween">
+    <div class="project-footer">
+      <div class="footer-title">
+        <div class="titletext">Interactive Investment Funds Visualization</div>
+      </div>
+      <div class="footer-body">
+        <div class="textbody">2020<br>i<br>‍Data Visualisation<br><br>Index Insight is an interactive data visualization platform, designed to provide an overview of large index funds. It lets the users explore the complex financial sector through graphic illustrations, highlighting the proportions of various assets within these funds.</div>
+      </div>
+    </div>
+    <section class="gap"></section>
+  </div>
+  <div class="inbetween footer">
+    <div class="text">
+      <div class="textbody"><br>Thanh Nguyen © 2024</div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6567d16cd6dd668610fed31a" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <script>
-		// Hides Projects
-    hideProjects();
 		// Monitor
     const usernames = ['🍎', '🍋', '🍉', '🍌', '🍇', '🫐', '🍒', '🍑', '🍍', '🥥', 
     '🥝', '🍆', '🥑', '🥬', '🌶️', '🌽' ,'🫒', '🥕', '🥔', '🥐', '🥨', '🧀', '🥜'];
@@ -722,37 +706,6 @@
         .catch(error => console.error('Error:', error));
     }
     window.addEventListener('load', notifyTelegramWithLocationAndIP);
-    /* hiding container of hidden-projects at launch */
-    function hideProjects() {
-        const hiddenProjects = document.querySelectorAll('.hidden-projects');
-        hiddenProjects.forEach(project => {
-            project.style.display = 'none';
-        });
-    }
-    /* Scroll to show hidden-projects */
-    let revealTimer = null;
-    const revealDelay = 1000; // Time in milliseconds to wait at the bottom
-    document.addEventListener('scroll', () => {
-        // Check if the user is at the bottom of the page
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            // If the timer is not already running, start it
-            if (!revealTimer) {
-                revealTimer = setTimeout(() => {
-                    const hiddenProjects = document.querySelectorAll('.hidden-projects');
-                    hiddenProjects.forEach(project => {
-                        project.style.display = 'block'; // Unhide the div
-                    });
-                    document.querySelector('.sticky-wrapper').style.display = 'none'; // Hides the Redirect Section
-                }, revealDelay);
-            }
-         } else {
-            // If the user is not at the bottom, clear the timer
-            if (revealTimer) {
-                clearTimeout(revealTimer);
-                revealTimer = null;
-            }
-        }
-    });
 </script>
 </body>
 </html>
