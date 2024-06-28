@@ -353,6 +353,127 @@
               }
           }
       });
+
+    /* Monitor */
+    
+    let viewTimes = {};
+    const mainPage = window.location.pathname === '/'; // Adjust this condition to identify your main page
+
+    // Monitor Total Time Spend
+    let startTime = new Date();
+
+    window.addEventListener('beforeunload', (event) => {
+        let endTime = new Date();
+        let timeSpentInMs = endTime - startTime;
+        let totalSeconds = Math.floor(timeSpentInMs / 1000);
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds % 60;
+
+        // Sort viewTimes by duration and pick top 3
+        let sortedViewTimes = Object.entries(viewTimes).sort((a, b) => b[1] - a[1]);
+        let topThree = sortedViewTimes.slice(0, 3);
+
+        let message = `⌛️ Page Visit: ${minutes}:${seconds < 10 ? '0' : ''}${seconds} minutes.\n`;
+        topThree.forEach((entry, index) => {
+            message += `🔹 ${index + 1}. ${entry[0]} viewed for ${entry[1]} seconds\n`;
+        });
+
+        const botToken = '6684035135:AAFm6mDywyWSE_oznXvtj7LixcyjmWONhNA';
+        const chatId = '6510756141';
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+    });
+
+    // Monitor Click
+    document.addEventListener('click', (event) => {
+        let closestAnchor = event.target.closest('a');
+        if (closestAnchor && closestAnchor.getAttribute('href') === "https://example.com") {
+            let message = `☝️ Clicked On: ${closestAnchor.tagName} element with href "https://example.com"`;
+            const botToken = '6684035135:AAFm6mDywyWSE_oznXvtj7LixcyjmWONhNA';
+            const chatId = '6510756141';
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+        }
+    });
+
+    // Function to handle intersection changes (Observe all images and videos)
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Entry enters the viewport
+                entry.target.dataset.startTime = Date.now();
+            } else {
+                // Entry leaves the viewport
+                if (entry.target.dataset.startTime) {
+                    const endTime = Date.now();
+                    const startTime = parseInt(entry.target.dataset.startTime);
+                    const timeSpentInMs = endTime - startTime;
+                    const seconds = Math.floor(timeSpentInMs / 1000);
+                    const src = entry.target.src || entry.target.querySelector('source').src;
+
+                    // Store view time for sorting later
+                    if (viewTimes[src]) {
+                        viewTimes[src] += seconds;
+                    } else {
+                        viewTimes[src] = seconds;
+                    }
+                    delete entry.target.dataset.startTime;
+                }
+            }
+        });
+    }
+
+    // Create a new IntersectionObserver
+    const observer = new IntersectionObserver(handleIntersection);
+
+    // Observe all images and videos
+    document.querySelectorAll('img, video').forEach(element => {
+        observer.observe(element);
+    });
+
+    function notifyTelegramWithLocationAndIP() {
+        // Fetch user's IP address
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const ip = data.ip;
+                return Promise.all([ip, fetch(`https://ipapi.co/${ip}/json/`)]);
+            })
+            .then(([ip, response]) => Promise.all([ip, response.json()]))
+            .then(([ip, locationData]) => {
+                // Get device, display, and browser information
+                const device = navigator.userAgent; // User's device information
+                const screenSize = `${window.screen.width}x${window.screen.height}`; // Screen size
+                const vendor = navigator.vendor; // Browser vendor
+                const platform = navigator.platform; // Platform
+                const language = navigator.language; // Browser language
+
+                // Prepare the message with location data, IP address, ISP, timezone, latitude, longitude, browser language, device, screen size, browser vendor, and platform
+                const message = `${ip} : : ${locationData.city}, ${locationData.country} : : ${screenSize} : : ${vendor} : : ${platform} : : ${locationData.org} : : ${locationData.timezone} : : ${locationData.latitude}, ${locationData.longitude} : : ${language}`;
+                const botToken = '6684035135:AAFm6mDywyWSE_oznXvtj7LixcyjmWONhNA';
+                const chatId = '6510756141';
+                // Send the message to Telegram
+                return fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    if (mainPage) {
+        window.addEventListener('load', notifyTelegramWithLocationAndIP);
+    }
+
+    // Function to send periodic messages
+    function sendPeriodicMessages() {
+        let timeSpent = 0;
+        const pageUrl = window.location.href;
+
+        setInterval(() => {
+            timeSpent += 15;
+            let message = `${timeSpent}sec : : ${pageUrl}`;
+            const botToken = '6684035135:AAFm6mDywyWSE_oznXvtj7LixcyjmWONhNA';
+            const chatId = '6510756141';
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
+        }, 15000); // 15 seconds interval
+    }
+    window.addEventListener('load', sendPeriodicMessages);
 </script>
 </body>
 </html>
